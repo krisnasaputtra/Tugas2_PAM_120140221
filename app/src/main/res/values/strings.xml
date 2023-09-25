@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Tugas_PAM_1_120140221</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_name">Krisna Saputra</string>
+    <string name="nav_header_email">krisna.120140221@student.itera.ac.id</string>
+    <string name="nav_header_desc">Krisna Saputra Profile</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">SlideShow</string>
+    <string name="menu_skill">Skill</string>
+</resources>
