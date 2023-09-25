@@ -1,4 +1,13 @@
 package com.example.tugas_pam_1_120140221.ui.skill
 
-class SkillViewModel {
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+
+class SkillViewModel : ViewModel() {
+
+    private val _text = MutableLiveData<String>().apply {
+        value = "This is skill Fragment"
+    }
+    val text: LiveData<String> = _text
 }

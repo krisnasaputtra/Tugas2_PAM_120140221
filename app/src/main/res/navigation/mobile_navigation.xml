@@ -24,23 +24,20 @@
         tools:layout="@layout/fragment_slideshow" />
 
     <fragment
-        android:id="@+id/nav_skill"
-        android:name="com.example.tugas_pam_1_120140221.ui.skill.SkillFragment"
+        android:id="@+id/nav_skill_detail"
+        android:name="com.example.tugas_pam_1_120140221.ui.skill.SkillFragmentDetail"
         android:label="@string/menu_skill"
-        tools:layout="@layout/fragment_skill" >
-        <action
-            android:id="@+id/action_nav_skill_to_nav_skill_detail"
-            app:destination="@id/nav_skill_detail" />
+        tools:layout="@layout/fragment_skill_detail" >
     </fragment>
 
-    <fragment
-        android:id="@+id/nav_skill_detail"
-        android:name="com.example.tugas_pam_1_120140221.ui.skill.SkillFragment"
-        android:label="@string/menu_skill"
-        tools:layout="@layout/fragment_skill" >
-        <argument
-            android:name="extra_name"
-            app:argType="string" />
-    </fragment>
+<!--    <fragment-->
+<!--        android:id="@+id/nav_skill_detail"-->
+<!--        android:name="com.example.tugas_pam_1_120140221.ui.skill.SkillFragment"-->
+<!--        android:label="@string/menu_skill"-->
+<!--        tools:layout="@layout/fragment_skill" >-->
+<!--        <argument-->
+<!--            android:name="extra_name"-->
+<!--            app:argType="string" />-->
+<!--    </fragment>-->
 
 </navigation>
