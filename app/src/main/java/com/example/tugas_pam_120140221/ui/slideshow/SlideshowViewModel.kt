@@ -1,4 +1,4 @@
-package com.example.tugas_pam_1_120140221.ui.slideshow
+package com.example.tugas_pam_120140221.ui.slideshow
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

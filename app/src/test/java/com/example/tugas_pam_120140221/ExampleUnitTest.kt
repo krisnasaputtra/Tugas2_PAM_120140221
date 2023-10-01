@@ -1,4 +1,4 @@
-package com.example.tugas_pam_1_120140221
+package com.example.tugas_pam_120140221
 
 import org.junit.Test
 

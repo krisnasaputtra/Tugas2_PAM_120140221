@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Tugas_PAM_1_120140221"
+rootProject.name = "Tugas_PAM_120140221"
 include(":app")
