@@ -5,10 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.appcompat.widget.SearchView
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tugas_pam_120140221.R
+import java.util.Locale
 import kotlin.collections.ArrayList
 
 private const val t10 = "t1"
@@ -19,6 +22,7 @@ class SkillFragment : Fragment() {
 
     private lateinit var adapter : SkillAdapter
     private lateinit var recyclerView: RecyclerView
+    private lateinit var searchView: SearchView
     private lateinit var skillArrayList : ArrayList<Skill>
     private lateinit var imageSkill : Array<Int>
     private lateinit var textImageSkill : Array<String>
@@ -48,11 +52,22 @@ class SkillFragment : Fragment() {
         dataInitialize()
         adapter = SkillAdapter(skillArrayList)
         recyclerView.adapter = adapter
+        searchView = view.findViewById(R.id.search_action)
 
         adapter.onItemClick = {
             navigateToDetail(it.textImageSkill)
         }
 
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                filterList(newText)
+                return true
+            }
+        })
     }
 
     override fun onDestroyView() {
@@ -62,6 +77,25 @@ class SkillFragment : Fragment() {
 
     private fun navigateToDetail(extraName: String){
         findNavController().navigate(SkillFragmentDirections.actionNavSkillToNavSkillDetail(extraName))
+    }
+
+    private fun filterList(query: String?) {
+
+        if (query != null) {
+            val filteredList = ArrayList<Skill>()
+            for (i in skillArrayList) {
+                if (i.textImageSkill.lowercase(Locale.ROOT).contains(query)) {
+                    filteredList.add(i)
+                }
+            }
+
+            if (filteredList.isEmpty()) {
+                Toast.makeText(context, "No Data Found", Toast.LENGTH_SHORT).show()
+            }
+            else {
+                adapter.setFilteredList(filteredList)
+            }
+        }
     }
 
     private fun dataInitialize(){
