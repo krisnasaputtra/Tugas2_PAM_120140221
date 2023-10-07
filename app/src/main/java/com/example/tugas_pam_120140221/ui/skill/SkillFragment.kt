@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.tugas_pam_120140221.R
 import java.util.Locale
 import kotlin.collections.ArrayList
+import com.example.tugas_pam_120140221.model.Skill
+import com.example.tugas_pam_120140221.helper.ConstantUtil
 
 private const val t10 = "t1"
 private const val t20 = "t2"
@@ -24,9 +26,6 @@ class SkillFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var searchView: SearchView
     private lateinit var skillArrayList : ArrayList<Skill>
-    private lateinit var imageSkill : Array<Int>
-    private lateinit var textImageSkill : Array<String>
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -99,34 +98,9 @@ class SkillFragment : Fragment() {
     }
 
     private fun dataInitialize(){
-        skillArrayList = arrayListOf<Skill>()
+        skillArrayList = arrayListOf()
 
-        imageSkill = arrayOf(
-            R.drawable.ic_skill_cpp,
-            R.drawable.ic_skill_python,
-            R.drawable.ic_skill_javascript,
-            R.drawable.ic_skill_typescript
-        )
-
-        textImageSkill = arrayOf(
-            getString(R.string.text_cpp),
-            getString(R.string.text_python),
-            getString(R.string.text_javascript),
-            getString(R.string.text_typescript),
-        )
-
-        getUserData()
-
-    }
-
-    private fun getUserData() {
-
-        for (i in imageSkill.indices){
-            val skill = Skill(imageSkill[i],textImageSkill[i])
-            skillArrayList.add(skill)
-
-        }
-
+        skillArrayList.addAll(ConstantUtil.getSkillData(this))
     }
 
 }

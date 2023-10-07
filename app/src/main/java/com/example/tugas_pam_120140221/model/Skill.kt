@@ -1,4 +1,4 @@
-package com.example.tugas_pam_120140221.ui.skill
+package com.example.tugas_pam_120140221.model
 
 import android.os.Parcel
 import android.os.Parcelable

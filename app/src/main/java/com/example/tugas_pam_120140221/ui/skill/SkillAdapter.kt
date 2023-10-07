@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tugas_pam_120140221.R
+import com.example.tugas_pam_120140221.model.Skill
 
 class SkillAdapter(private var list: ArrayList<Skill>) : RecyclerView.Adapter<SkillAdapter.SkillViewHolder>() {
 

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="string_skills_array">
+        <item>C++</item>
+        <item>Python</item>
+        <item>Javascript</item>
+        <item>TypeScript</item>
+    </string-array>
+
+    <integer-array name="image_skills_array">
+        <item>@drawable/ic_skill_cpp</item>
+        <item>@drawable/ic_skill_python</item>
+        <item>@drawable/ic_skill_javascript</item>
+        <item>@drawable/ic_skill_typescript</item>
+    </integer-array>
+</resources>

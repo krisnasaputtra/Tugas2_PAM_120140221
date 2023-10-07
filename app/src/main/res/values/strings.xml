@@ -13,9 +13,4 @@
     <string name="menu_slideshow">SlideShow</string>
     <string name="menu_skill">Skill</string>
 
-    <string name="text_cpp">C++</string>
-    <string name="text_python">Python</string>
-    <string name="text_javascript">JavaScript</string>
-    <string name="text_typescript">TypeScript</string>
-
 </resources>
